@@ -2,6 +2,7 @@ import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { ThemedView } from '../../components/ThemedView';
 import { ThemedText } from '../../components/ThemedText';
+import ProfileCard from '@/components/ProfileSet';
 
 // You'll need to create these components
 // import UpcomingEvents from '../../components/events/UpcomingEvents';
@@ -16,6 +17,11 @@ export default function HomeScreen() {
         <ThemedView style={styles.section}>
           <ThemedText style={styles.sectionTitle}>Upcoming Events</ThemedText>
         </ThemedView>
+        <ProfileCard 
+        name="John Doe"
+        imageUri="https://example.com/johndoe.jpg"
+        bio="Software Engineer at Example Corp."
+      />
 
         <ThemedView style={styles.section}>
           <ThemedText style={styles.sectionTitle}>Live Now</ThemedText>
