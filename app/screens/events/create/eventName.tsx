@@ -8,7 +8,6 @@ import { CharacterCounter } from '../../../../components/events/create/Character
 import { NextButton } from '../../../../components/events/create/NextButton';
 import { RootStackParamList } from '../../../types/createNavigation'; // Adjust the import path as needed
 import { router } from 'expo-router';
-import { View } from 'react-native-reanimated/lib/typescript/Animated';
 
 
 const MAX_LENGTH = 50;
@@ -24,7 +23,7 @@ export default function EventName() {
   };
 
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <ThemedText style={styles.title}>Name your event</ThemedText>
       <EventNameInput
         value={eventName}
@@ -33,7 +32,7 @@ export default function EventName() {
       />
       <CharacterCounter current={eventName.length} max={MAX_LENGTH} />
       <NextButton onPress={handleNext} disabled={eventName.trim().length === 0} />
-    </View>
+    </ThemedView>
   );
 }
 
